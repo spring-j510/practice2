@@ -25,6 +25,7 @@ for x in xrange:
     t4_list.append(func(x,4))
     t16_list.append(func(x,16))
 
+
 ###plot###
 plt.figure(figsize=(16,9))
 plt.plot(xrange_list,t1_list, marker="", color = "red", linestyle = "-", label="c_t=1")

@@ -38,6 +38,7 @@ for x in xrange:
     f4 = -1*derivative(func4, x, h)
     f4_list.append(f4)
 
+
 ###plot###
 fig = plt.figure()
 
