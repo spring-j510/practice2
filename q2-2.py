@@ -4,28 +4,12 @@ from scipy.special import erf
 import math
 import matplotlib.pyplot as plt
 
-def f(t):
-  return np.e ** (-t ** 2)
-
-# 作成した誤差関数
-result_1 = integrate.quad(f, 0, 1)[0] * (2 / np.sqrt(np.pi))
-
-# scipyの誤差関数
-result_2 = erf(1)
-
-print(result_1)
-print(result_2)
-
-
 def func(x,t):
     cs = 1
     c0 = 0
     d = 1
     c = cs - (cs-c0)* math.erf(x/(2*math.sqrt(d*t)))
     return c
-
-
-print(func(2,1))
 
 h = 0.001
 xrange = np.arange(0, 10, h)
@@ -34,9 +18,6 @@ xrange_list = []
 t1_list = []
 t4_list = []
 t16_list = []
-
-t_range = [1,4,16]
-
 
 for x in xrange:
     xrange_list.append(x)
